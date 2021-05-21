@@ -1,0 +1,176 @@
+/*
+id = #
+class = .
+
+*/
+
+body
+{
+  background-color: #333333;
+/*  background-color: rgba(34, 34, 34, 1); */
+  color: rgba(144, 144, 144, 1);
+  font: 14px sans-serif;
+}
+
+a:link { color: rgba(144, 144, 144, 1); }
+a:visited { color: rgba(144, 144, 144, 1); }
+a:hover { color: rgba(144, 144, 144, 1); }
+a:active { color: #ffffff; }
+
+a.itemlink:link { color: rgba(34, 34, 34, 1); }
+a.itemlink:visited { color: rgba(34, 34, 34, 1); }
+a.itemlink:hover { color: rgba(34, 34, 34, 1); }
+a.itemlink:active { color: #ffffff; }
+
+
+th
+{
+  background: #226688; 
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px;
+  text-shadow: 0px 1px #00321f;
+}
+
+tr.alternatingcolours:nth-child(odd)
+{
+  background-color: #77bbdd; */
+}
+
+tr.alternatingcolours:nth-child(even)
+{
+  background-color: #5599bb;
+}
+
+.centered
+{
+  text-align: center;
+}
+
+#createnewgamediv
+{
+  margin: 5px 5px 40px 5px;
+  padding: 5px;
+}
+
+#deletedropdown
+{
+  background-color: rgba(34, 34, 34, 1);
+  border-style: none;
+  border-bottom: 1px solid rgba(144, 144, 144, 1);
+  color: rgba(144, 144, 144, 1);
+  font-weight: bold;
+}
+
+.gamelistbutton
+{
+  background: transparent;
+  border: none;
+  color: rgba(144, 144, 144, 1);
+  cursor: pointer;
+  font-size: 16px;
+  font-family: sans-serif;
+  margin: 3px;
+  padding: 0px;
+  text-decoration: underline;
+
+}
+
+.item
+{
+  color: #333333;
+  padding: 5px 10px 5px 5px;
+  white-space: nowrap;
+}
+
+.itemcontainer, .trackingcontainer
+{
+/*  background: #226688; */
+  background: rgba(34, 34, 34, 1);
+  border: 1px solid black;
+  display: inline-block;
+  margin: 10px;
+  padding: 0px 10px 10px 10px;
+  vertical-align: top;
+  max-width: 45%; 
+}
+
+.itemgroupcontainer, .trackinggroupcontainers
+{
+  display: inline-block;
+}
+
+.itemgroupheader, .trackinggroupheader
+{
+  color: #cccccc;
+  text-align: center;
+  width: 100%;
+}
+.itemtable, .trackingtable
+{
+  border-collapse: collapse;
+  width: 282px;
+}
+
+.leftalign
+{
+  text-align: left;
+}
+
+#listofgamesdiv
+{
+  margin: 5px;
+  padding: 5px;
+}
+
+#newgameinputbox
+{
+  background-color: #333333;
+  border: 0px 0px 5px 0px;
+  border-style: none;
+  border-bottom: 1px solid rgba(144, 144, 144, 1);
+  color: rgba(144, 144, 144, 1);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.quantities
+{
+  font-weight: bold;
+}
+
+.statusmessage
+{
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.submitbutton
+{
+  background: transparent;
+  border: none;
+  color: rgba(144, 144, 144, 1);
+  cursor: pointer;
+  font-size: 14px;
+  font-family: sans-serif;
+  margin: 0px;
+  padding: 0px;
+  text-decoration: underline;
+}
+
+.radiolabel label
+{
+  color: rgba(144, 144, 144, 1);
+}
+
+.resettable
+{
+  border-collapse: collapse;
+}
+
+.trackablesresetcontainer
+{
+  display: inline-block;
+  vertical-align: top;
+}
