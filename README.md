@@ -8,3 +8,8 @@ Item tracking for getting Perfection in Stardew Valley
 Full Disclosure: This is my first-ever LAMP stack project (or, in my case a "LLPP" project), I have no idea what I'm doing, and if this breaks or blows up your computer, the best help I'll be able to offer is to point you to Google.
 
 More Full Disclosure: This is also my first project on Github, so... yeah.
+
+
+UPDATES
+
+2021-June-1 - Updated an error in the recipes table (who knew the iron transmute bar needed THREE copper bars?!?)
