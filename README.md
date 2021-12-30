@@ -5,12 +5,14 @@ Item tracking for getting Perfection in Stardew Valley
 2. Update the config.php file to target your database, and run a webserver with PHP support to view the files.  (I've done it on Linux with lighttpd and PostgreSQL, and I've done it on Windows with UniServerZ and MySQL.)
 3. Pray.
 
-Full Disclosure: This is my first-ever LAMP stack project (or, in my case a "LLPP" project), I have no idea what I'm doing, and if this breaks or blows up your computer, the best help I'll be able to offer is to point you to Google.
+Full Disclosure: This is my first-ever LAMP stack project (or, in my case a "OHPP" project, since I made it in OpenBSD, and used the built-in web server, and Postgres), I have no idea what I'm doing, and if this breaks or blows up your computer, the best help I'll be able to offer is to point you to Google.
 
 More Full Disclosure: This is also my first project on Github, so... yeah.
 
 
 UPDATES
+
+2021-December-30 - Renamed Willy's Boat to "Willy's Boat," broke out the three items (not standard, but whatevs), and moved it to Quests instead of Crafting.
 
 2021-June-7 - Added the csv files containing all the item and recipe data (in case you want to database-ify it yourself).
 
