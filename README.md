@@ -17,3 +17,4 @@ UPDATES
 2021-June-7 - Added the csv files containing all the item and recipe data (in case you want to database-ify it yourself).
 
 2021-June-1 - Updated an error in the recipes table (who knew the iron transmute bar needed THREE copper bars?!?)
+.
