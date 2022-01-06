@@ -12,6 +12,8 @@ More Full Disclosure: This is also my first project on Github, so... yeah.
 
 UPDATES
 
+2022-January-6 - I had Oil listed as a cooking recipe for some reason?  Weird.
+
 2021-December-30 - Renamed Willy's Boat to "Willy's Boat," broke out the three items (not standard, but whatevs), and moved it to Quests instead of Crafting.
 
 2021-June-7 - Added the csv files containing all the item and recipe data (in case you want to database-ify it yourself).
