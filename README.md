@@ -12,6 +12,8 @@ More Full Disclosure: This is also my first project on Github, so... yeah.
 
 UPDATES
 
+2022-April-25 - Added the walnut puzzle quests (Gourmand Frog (my guy), the mermaid puzzle, and the Banana Shrine).
+
 2022-January-6 - I had Oil listed as a cooking recipe for some reason?  Weird.
 
 2021-December-30 - Renamed Willy's Boat to "Willy's Boat," broke out the three items (not standard, but whatevs), and moved it to Quests instead of Crafting.
