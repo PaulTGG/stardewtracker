@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 14.2
--- Dumped by pg_dump version 14.2
+-- Dumped from database version 15.5
+-- Dumped by pg_dump version 15.5
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -20,7 +20,7 @@ SET row_security = off;
 -- Name: stardewtracker; Type: DATABASE; Schema: -; Owner: postgres
 --
 
-CREATE DATABASE stardewtracker WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE = 'C';
+CREATE DATABASE stardewtracker WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE_PROVIDER = libc LOCALE = 'C';
 
 
 ALTER DATABASE stardewtracker OWNER TO postgres;
@@ -39,35 +39,13 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Name: gamedata16chocolate_pk_seq; Type: SEQUENCE; Schema: public; Owner: stardewuser
+-- Name: public; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
-CREATE SEQUENCE public.gamedata16chocolate_pk_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
+-- *not* creating schema, since initdb creates it
 
 
-ALTER TABLE public.gamedata16chocolate_pk_seq OWNER TO stardewuser;
-
-SET default_tablespace = '';
-
-SET default_table_access_method = heap;
-
---
--- Name: gamedata16chocolate; Type: TABLE; Schema: public; Owner: stardewuser
---
-
-CREATE TABLE public.gamedata16chocolate (
-    pk integer DEFAULT nextval('public.gamedata16chocolate_pk_seq'::regclass) NOT NULL,
-    trackable_id integer,
-    made boolean DEFAULT false
-);
-
-
-ALTER TABLE public.gamedata16chocolate OWNER TO stardewuser;
+ALTER SCHEMA public OWNER TO postgres;
 
 --
 -- Name: gamedata2cowbell_pk_seq; Type: SEQUENCE; Schema: public; Owner: stardewuser
@@ -83,6 +61,10 @@ CREATE SEQUENCE public.gamedata2cowbell_pk_seq
 
 ALTER TABLE public.gamedata2cowbell_pk_seq OWNER TO stardewuser;
 
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
 --
 -- Name: gamedata2cowbell; Type: TABLE; Schema: public; Owner: stardewuser
 --
@@ -95,6 +77,33 @@ CREATE TABLE public.gamedata2cowbell (
 
 
 ALTER TABLE public.gamedata2cowbell OWNER TO stardewuser;
+
+--
+-- Name: gamedata30skrad_pk_seq; Type: SEQUENCE; Schema: public; Owner: stardewuser
+--
+
+CREATE SEQUENCE public.gamedata30skrad_pk_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.gamedata30skrad_pk_seq OWNER TO stardewuser;
+
+--
+-- Name: gamedata30skrad; Type: TABLE; Schema: public; Owner: stardewuser
+--
+
+CREATE TABLE public.gamedata30skrad (
+    pk integer DEFAULT nextval('public.gamedata30skrad_pk_seq'::regclass) NOT NULL,
+    trackable_id integer,
+    made boolean DEFAULT false
+);
+
+
+ALTER TABLE public.gamedata30skrad OWNER TO stardewuser;
 
 --
 -- Name: gamedata8relaxed_pk_seq; Type: SEQUENCE; Schema: public; Owner: stardewuser
@@ -264,516 +273,6 @@ ALTER TABLE ONLY public.recipes ALTER COLUMN pk SET DEFAULT nextval('public.reci
 
 
 --
--- Data for Name: gamedata16chocolate; Type: TABLE DATA; Schema: public; Owner: stardewuser
---
-
-INSERT INTO public.gamedata16chocolate VALUES (1, 447, true);
-INSERT INTO public.gamedata16chocolate VALUES (255, 150, true);
-INSERT INTO public.gamedata16chocolate VALUES (69, 201, true);
-INSERT INTO public.gamedata16chocolate VALUES (84, 159, true);
-INSERT INTO public.gamedata16chocolate VALUES (256, 338, true);
-INSERT INTO public.gamedata16chocolate VALUES (3, 456, true);
-INSERT INTO public.gamedata16chocolate VALUES (92, 919, true);
-INSERT INTO public.gamedata16chocolate VALUES (82, 238, true);
-INSERT INTO public.gamedata16chocolate VALUES (268, 296, true);
-INSERT INTO public.gamedata16chocolate VALUES (85, 214, true);
-INSERT INTO public.gamedata16chocolate VALUES (78, 732, false);
-INSERT INTO public.gamedata16chocolate VALUES (70, 223, true);
-INSERT INTO public.gamedata16chocolate VALUES (13, 235, true);
-INSERT INTO public.gamedata16chocolate VALUES (87, 333, true);
-INSERT INTO public.gamedata16chocolate VALUES (7, 499, true);
-INSERT INTO public.gamedata16chocolate VALUES (23, 207, true);
-INSERT INTO public.gamedata16chocolate VALUES (16, 91, true);
-INSERT INTO public.gamedata16chocolate VALUES (17, 904, true);
-INSERT INTO public.gamedata16chocolate VALUES (277, 152, true);
-INSERT INTO public.gamedata16chocolate VALUES (504, 30031, true);
-INSERT INTO public.gamedata16chocolate VALUES (288, 465, true);
-INSERT INTO public.gamedata16chocolate VALUES (503, 30030, true);
-INSERT INTO public.gamedata16chocolate VALUES (502, 30029, true);
-INSERT INTO public.gamedata16chocolate VALUES (289, 396, true);
-INSERT INTO public.gamedata16chocolate VALUES (310, 400, true);
-INSERT INTO public.gamedata16chocolate VALUES (313, 698, true);
-INSERT INTO public.gamedata16chocolate VALUES (2, 705, true);
-INSERT INTO public.gamedata16chocolate VALUES (4, 300, true);
-INSERT INTO public.gamedata16chocolate VALUES (5, 129, true);
-INSERT INTO public.gamedata16chocolate VALUES (6, 454, true);
-INSERT INTO public.gamedata16chocolate VALUES (8, 160, true);
-INSERT INTO public.gamedata16chocolate VALUES (9, 613, true);
-INSERT INTO public.gamedata16chocolate VALUES (10, 634, true);
-INSERT INTO public.gamedata16chocolate VALUES (11, 274, true);
-INSERT INTO public.gamedata16chocolate VALUES (12, 605, true);
-INSERT INTO public.gamedata16chocolate VALUES (14, 685, true);
-INSERT INTO public.gamedata16chocolate VALUES (15, 198, true);
-INSERT INTO public.gamedata16chocolate VALUES (18, 691, true);
-INSERT INTO public.gamedata16chocolate VALUES (19, 368, true);
-INSERT INTO public.gamedata16chocolate VALUES (20, 370, true);
-INSERT INTO public.gamedata16chocolate VALUES (22, 787, true);
-INSERT INTO public.gamedata16chocolate VALUES (24, 346, true);
-INSERT INTO public.gamedata16chocolate VALUES (40, 684, true);
-INSERT INTO public.gamedata16chocolate VALUES (47, 190, true);
-INSERT INTO public.gamedata16chocolate VALUES (53, 638, true);
-INSERT INTO public.gamedata16chocolate VALUES (59, 372, true);
-INSERT INTO public.gamedata16chocolate VALUES (68, 404, true);
-INSERT INTO public.gamedata16chocolate VALUES (71, 926, true);
-INSERT INTO public.gamedata16chocolate VALUES (72, 334, true);
-INSERT INTO public.gamedata16chocolate VALUES (74, 393, true);
-INSERT INTO public.gamedata16chocolate VALUES (75, 695, true);
-INSERT INTO public.gamedata16chocolate VALUES (76, 270, true);
-INSERT INTO public.gamedata16chocolate VALUES (77, 717, true);
-INSERT INTO public.gamedata16chocolate VALUES (79, 710, true);
-INSERT INTO public.gamedata16chocolate VALUES (80, 282, true);
-INSERT INTO public.gamedata16chocolate VALUES (81, 612, true);
-INSERT INTO public.gamedata16chocolate VALUES (83, 716, true);
-INSERT INTO public.gamedata16chocolate VALUES (86, 418, true);
-INSERT INTO public.gamedata16chocolate VALUES (89, 409, true);
-INSERT INTO public.gamedata16chocolate VALUES (91, 22, true);
-INSERT INTO public.gamedata16chocolate VALUES (93, 920, true);
-INSERT INTO public.gamedata16chocolate VALUES (94, 466, true);
-INSERT INTO public.gamedata16chocolate VALUES (95, 807, true);
-INSERT INTO public.gamedata16chocolate VALUES (97, 704, true);
-INSERT INTO public.gamedata16chocolate VALUES (103, 148, true);
-INSERT INTO public.gamedata16chocolate VALUES (121, 267, true);
-INSERT INTO public.gamedata16chocolate VALUES (140, 398, true);
-INSERT INTO public.gamedata16chocolate VALUES (144, 188, true);
-INSERT INTO public.gamedata16chocolate VALUES (154, 304, true);
-INSERT INTO public.gamedata16chocolate VALUES (155, 260, true);
-INSERT INTO public.gamedata16chocolate VALUES (205, 725, true);
-INSERT INTO public.gamedata16chocolate VALUES (210, 635, true);
-INSERT INTO public.gamedata16chocolate VALUES (223, 144, true);
-INSERT INTO public.gamedata16chocolate VALUES (231, 376, true);
-INSERT INTO public.gamedata16chocolate VALUES (234, 128, true);
-INSERT INTO public.gamedata16chocolate VALUES (249, 394, true);
-INSERT INTO public.gamedata16chocolate VALUES (250, 138, true);
-INSERT INTO public.gamedata16chocolate VALUES (252, 146, true);
-INSERT INTO public.gamedata16chocolate VALUES (315, 593, true);
-INSERT INTO public.gamedata16chocolate VALUES (317, 421, true);
-INSERT INTO public.gamedata16chocolate VALUES (318, 155, true);
-INSERT INTO public.gamedata16chocolate VALUES (322, 402, true);
-INSERT INTO public.gamedata16chocolate VALUES (328, 701, true);
-INSERT INTO public.gamedata16chocolate VALUES (330, 256, true);
-INSERT INTO public.gamedata16chocolate VALUES (342, 130, true);
-INSERT INTO public.gamedata16chocolate VALUES (343, 271, true);
-INSERT INTO public.gamedata16chocolate VALUES (346, 769, true);
-INSERT INTO public.gamedata16chocolate VALUES (349, 140, true);
-INSERT INTO public.gamedata16chocolate VALUES (357, 262, true);
-INSERT INTO public.gamedata16chocolate VALUES (360, 16, true);
-INSERT INTO public.gamedata16chocolate VALUES (361, 406, true);
-INSERT INTO public.gamedata16chocolate VALUES (363, 412, true);
-INSERT INTO public.gamedata16chocolate VALUES (365, 388, true);
-INSERT INTO public.gamedata16chocolate VALUES (366, 322, true);
-INSERT INTO public.gamedata16chocolate VALUES (367, 328, true);
-INSERT INTO public.gamedata16chocolate VALUES (145, 614, true);
-INSERT INTO public.gamedata16chocolate VALUES (117, 649, false);
-INSERT INTO public.gamedata16chocolate VALUES (379, 10025, true);
-INSERT INTO public.gamedata16chocolate VALUES (126, 205, true);
-INSERT INTO public.gamedata16chocolate VALUES (380, 10026, true);
-INSERT INTO public.gamedata16chocolate VALUES (124, 225, true);
-INSERT INTO public.gamedata16chocolate VALUES (122, 464, true);
-INSERT INTO public.gamedata16chocolate VALUES (99, 463, true);
-INSERT INTO public.gamedata16chocolate VALUES (123, 202, true);
-INSERT INTO public.gamedata16chocolate VALUES (135, 888, true);
-INSERT INTO public.gamedata16chocolate VALUES (141, 297, true);
-INSERT INTO public.gamedata16chocolate VALUES (156, 918, true);
-INSERT INTO public.gamedata16chocolate VALUES (120, 213, true);
-INSERT INTO public.gamedata16chocolate VALUES (119, 728, true);
-INSERT INTO public.gamedata16chocolate VALUES (157, 233, true);
-INSERT INTO public.gamedata16chocolate VALUES (127, 610, true);
-INSERT INTO public.gamedata16chocolate VALUES (505, 30032, true);
-INSERT INTO public.gamedata16chocolate VALUES (381, 10027, true);
-INSERT INTO public.gamedata16chocolate VALUES (394, 10040, true);
-INSERT INTO public.gamedata16chocolate VALUES (397, 10043, true);
-INSERT INTO public.gamedata16chocolate VALUES (404, 10050, true);
-INSERT INTO public.gamedata16chocolate VALUES (419, 10065, true);
-INSERT INTO public.gamedata16chocolate VALUES (88, 414, true);
-INSERT INTO public.gamedata16chocolate VALUES (96, 242, true);
-INSERT INTO public.gamedata16chocolate VALUES (98, 687, true);
-INSERT INTO public.gamedata16chocolate VALUES (110, 872, true);
-INSERT INTO public.gamedata16chocolate VALUES (111, 595, true);
-INSERT INTO public.gamedata16chocolate VALUES (112, 497, true);
-INSERT INTO public.gamedata16chocolate VALUES (113, 240, true);
-INSERT INTO public.gamedata16chocolate VALUES (115, 885, true);
-INSERT INTO public.gamedata16chocolate VALUES (116, 259, true);
-INSERT INTO public.gamedata16chocolate VALUES (125, 194, true);
-INSERT INTO public.gamedata16chocolate VALUES (128, 248, true);
-INSERT INTO public.gamedata16chocolate VALUES (129, 325, true);
-INSERT INTO public.gamedata16chocolate VALUES (131, 829, true);
-INSERT INTO public.gamedata16chocolate VALUES (132, 903, true);
-INSERT INTO public.gamedata16chocolate VALUES (133, 775, true);
-INSERT INTO public.gamedata16chocolate VALUES (134, 208, true);
-INSERT INTO public.gamedata16chocolate VALUES (136, 426, true);
-INSERT INTO public.gamedata16chocolate VALUES (137, 436, true);
-INSERT INTO public.gamedata16chocolate VALUES (138, 336, true);
-INSERT INTO public.gamedata16chocolate VALUES (139, 384, true);
-INSERT INTO public.gamedata16chocolate VALUES (142, 407, true);
-INSERT INTO public.gamedata16chocolate VALUES (148, 298, true);
-INSERT INTO public.gamedata16chocolate VALUES (149, 210, true);
-INSERT INTO public.gamedata16chocolate VALUES (150, 408, true);
-INSERT INTO public.gamedata16chocolate VALUES (152, 283, true);
-INSERT INTO public.gamedata16chocolate VALUES (153, 340, true);
-INSERT INTO public.gamedata16chocolate VALUES (158, 161, true);
-INSERT INTO public.gamedata16chocolate VALUES (162, 645, true);
-INSERT INTO public.gamedata16chocolate VALUES (167, 344, true);
-INSERT INTO public.gamedata16chocolate VALUES (171, 182, true);
-INSERT INTO public.gamedata16chocolate VALUES (173, 186, true);
-INSERT INTO public.gamedata16chocolate VALUES (175, 162, true);
-INSERT INTO public.gamedata16chocolate VALUES (187, 228, true);
-INSERT INTO public.gamedata16chocolate VALUES (191, 724, true);
-INSERT INTO public.gamedata16chocolate VALUES (196, 269, true);
-INSERT INTO public.gamedata16chocolate VALUES (199, 243, true);
-INSERT INTO public.gamedata16chocolate VALUES (203, 682, true);
-INSERT INTO public.gamedata16chocolate VALUES (209, 195, true);
-INSERT INTO public.gamedata16chocolate VALUES (215, 211, true);
-INSERT INTO public.gamedata16chocolate VALUES (216, 24, true);
-INSERT INTO public.gamedata16chocolate VALUES (221, 722, true);
-INSERT INTO public.gamedata16chocolate VALUES (224, 726, true);
-INSERT INTO public.gamedata16chocolate VALUES (235, 276, true);
-INSERT INTO public.gamedata16chocolate VALUES (253, 420, true);
-INSERT INTO public.gamedata16chocolate VALUES (273, 165, true);
-INSERT INTO public.gamedata16chocolate VALUES (274, 154, true);
-INSERT INTO public.gamedata16chocolate VALUES (284, 721, true);
-INSERT INTO public.gamedata16chocolate VALUES (286, 768, true);
-INSERT INTO public.gamedata16chocolate VALUES (368, 405, true);
-INSERT INTO public.gamedata16chocolate VALUES (369, 734, true);
-INSERT INTO public.gamedata16chocolate VALUES (370, 440, true);
-INSERT INTO public.gamedata16chocolate VALUES (371, 280, true);
-INSERT INTO public.gamedata16chocolate VALUES (372, 10018, true);
-INSERT INTO public.gamedata16chocolate VALUES (373, 10019, true);
-INSERT INTO public.gamedata16chocolate VALUES (374, 10020, true);
-INSERT INTO public.gamedata16chocolate VALUES (375, 10021, true);
-INSERT INTO public.gamedata16chocolate VALUES (376, 10022, true);
-INSERT INTO public.gamedata16chocolate VALUES (377, 10023, true);
-INSERT INTO public.gamedata16chocolate VALUES (378, 10024, true);
-INSERT INTO public.gamedata16chocolate VALUES (421, 20001, true);
-INSERT INTO public.gamedata16chocolate VALUES (426, 20006, true);
-INSERT INTO public.gamedata16chocolate VALUES (427, 20007, true);
-INSERT INTO public.gamedata16chocolate VALUES (432, 20012, true);
-INSERT INTO public.gamedata16chocolate VALUES (433, 20013, true);
-INSERT INTO public.gamedata16chocolate VALUES (434, 20014, true);
-INSERT INTO public.gamedata16chocolate VALUES (435, 20015, true);
-INSERT INTO public.gamedata16chocolate VALUES (436, 20016, true);
-INSERT INTO public.gamedata16chocolate VALUES (437, 20017, true);
-INSERT INTO public.gamedata16chocolate VALUES (438, 20018, true);
-INSERT INTO public.gamedata16chocolate VALUES (439, 20019, true);
-INSERT INTO public.gamedata16chocolate VALUES (440, 20020, true);
-INSERT INTO public.gamedata16chocolate VALUES (441, 20021, true);
-INSERT INTO public.gamedata16chocolate VALUES (217, 199, true);
-INSERT INTO public.gamedata16chocolate VALUES (228, 604, true);
-INSERT INTO public.gamedata16chocolate VALUES (206, 149, true);
-INSERT INTO public.gamedata16chocolate VALUES (214, 457, true);
-INSERT INTO public.gamedata16chocolate VALUES (272, 227, true);
-INSERT INTO public.gamedata16chocolate VALUES (225, 832, true);
-INSERT INTO public.gamedata16chocolate VALUES (211, 289, true);
-INSERT INTO public.gamedata16chocolate VALUES (218, 636, true);
-INSERT INTO public.gamedata16chocolate VALUES (356, 331, true);
-INSERT INTO public.gamedata16chocolate VALUES (237, 236, true);
-INSERT INTO public.gamedata16chocolate VALUES (229, 906, true);
-INSERT INTO public.gamedata16chocolate VALUES (220, 141, true);
-INSERT INTO public.gamedata16chocolate VALUES (227, 206, true);
-INSERT INTO public.gamedata16chocolate VALUES (233, 192, true);
-INSERT INTO public.gamedata16chocolate VALUES (359, 774, true);
-INSERT INTO public.gamedata16chocolate VALUES (236, 608, true);
-INSERT INTO public.gamedata16chocolate VALUES (270, 92, true);
-INSERT INTO public.gamedata16chocolate VALUES (188, 834, true);
-INSERT INTO public.gamedata16chocolate VALUES (232, 651, false);
-INSERT INTO public.gamedata16chocolate VALUES (280, 733, false);
-INSERT INTO public.gamedata16chocolate VALUES (190, 731, true);
-INSERT INTO public.gamedata16chocolate VALUES (226, 221, true);
-INSERT INTO public.gamedata16chocolate VALUES (219, 215, true);
-INSERT INTO public.gamedata16chocolate VALUES (184, 908, true);
-INSERT INTO public.gamedata16chocolate VALUES (189, 905, true);
-INSERT INTO public.gamedata16chocolate VALUES (290, 226, true);
-INSERT INTO public.gamedata16chocolate VALUES (21, 767, true);
-INSERT INTO public.gamedata16chocolate VALUES (30, 597, true);
-INSERT INTO public.gamedata16chocolate VALUES (35, 881, true);
-INSERT INTO public.gamedata16chocolate VALUES (230, 637, true);
-INSERT INTO public.gamedata16chocolate VALUES (37, 132, true);
-INSERT INTO public.gamedata16chocolate VALUES (41, 874, true);
-INSERT INTO public.gamedata16chocolate VALUES (42, 700, true);
-INSERT INTO public.gamedata16chocolate VALUES (44, 142, true);
-INSERT INTO public.gamedata16chocolate VALUES (46, 143, true);
-INSERT INTO public.gamedata16chocolate VALUES (48, 78, true);
-INSERT INTO public.gamedata16chocolate VALUES (54, 286, true);
-INSERT INTO public.gamedata16chocolate VALUES (57, 702, true);
-INSERT INTO public.gamedata16chocolate VALUES (60, 330, true);
-INSERT INTO public.gamedata16chocolate VALUES (62, 382, true);
-INSERT INTO public.gamedata16chocolate VALUES (73, 378, true);
-INSERT INTO public.gamedata16chocolate VALUES (271, 131, true);
-INSERT INTO public.gamedata16chocolate VALUES (90, 18, true);
-INSERT INTO public.gamedata16chocolate VALUES (276, 265, true);
-INSERT INTO public.gamedata16chocolate VALUES (278, 706, true);
-INSERT INTO public.gamedata16chocolate VALUES (281, 766, true);
-INSERT INTO public.gamedata16chocolate VALUES (282, 796, true);
-INSERT INTO public.gamedata16chocolate VALUES (283, 137, true);
-INSERT INTO public.gamedata16chocolate VALUES (285, 416, true);
-INSERT INTO public.gamedata16chocolate VALUES (287, 224, true);
-INSERT INTO public.gamedata16chocolate VALUES (291, 686, true);
-INSERT INTO public.gamedata16chocolate VALUES (292, 799, true);
-INSERT INTO public.gamedata16chocolate VALUES (293, 399, true);
-INSERT INTO public.gamedata16chocolate VALUES (100, 442, true);
-INSERT INTO public.gamedata16chocolate VALUES (114, 771, true);
-INSERT INTO public.gamedata16chocolate VALUES (118, 403, true);
-INSERT INTO public.gamedata16chocolate VALUES (146, 708, true);
-INSERT INTO public.gamedata16chocolate VALUES (147, 709, true);
-INSERT INTO public.gamedata16chocolate VALUES (151, 147, true);
-INSERT INTO public.gamedata16chocolate VALUES (165, 380, true);
-INSERT INTO public.gamedata16chocolate VALUES (169, 250, true);
-INSERT INTO public.gamedata16chocolate VALUES (174, 136, true);
-INSERT INTO public.gamedata16chocolate VALUES (176, 20, true);
-INSERT INTO public.gamedata16chocolate VALUES (185, 851, true);
-INSERT INTO public.gamedata16chocolate VALUES (186, 703, true);
-INSERT INTO public.gamedata16chocolate VALUES (192, 306, true);
-INSERT INTO public.gamedata16chocolate VALUES (194, 288, true);
-INSERT INTO public.gamedata16chocolate VALUES (197, 798, true);
-INSERT INTO public.gamedata16chocolate VALUES (200, 879, true);
-INSERT INTO public.gamedata16chocolate VALUES (201, 257, true);
-INSERT INTO public.gamedata16chocolate VALUES (204, 392, true);
-INSERT INTO public.gamedata16chocolate VALUES (208, 772, true);
-INSERT INTO public.gamedata16chocolate VALUES (294, 495, true);
-INSERT INTO public.gamedata16chocolate VALUES (295, 599, true);
-INSERT INTO public.gamedata16chocolate VALUES (296, 151, true);
-INSERT INTO public.gamedata16chocolate VALUES (297, 814, true);
-INSERT INTO public.gamedata16chocolate VALUES (298, 921, true);
-INSERT INTO public.gamedata16chocolate VALUES (300, 415, true);
-INSERT INTO public.gamedata16chocolate VALUES (303, 2, true);
-INSERT INTO public.gamedata16chocolate VALUES (316, 145, true);
-INSERT INTO public.gamedata16chocolate VALUES (331, 93, true);
-INSERT INTO public.gamedata16chocolate VALUES (341, 591, true);
-INSERT INTO public.gamedata16chocolate VALUES (347, 308, true);
-INSERT INTO public.gamedata16chocolate VALUES (348, 795, true);
-INSERT INTO public.gamedata16chocolate VALUES (350, 690, true);
-INSERT INTO public.gamedata16chocolate VALUES (351, 261, true);
-INSERT INTO public.gamedata16chocolate VALUES (352, 688, true);
-INSERT INTO public.gamedata16chocolate VALUES (353, 886, true);
-INSERT INTO public.gamedata16chocolate VALUES (354, 689, true);
-INSERT INTO public.gamedata16chocolate VALUES (355, 521, true);
-INSERT INTO public.gamedata16chocolate VALUES (362, 348, true);
-INSERT INTO public.gamedata16chocolate VALUES (364, 498, true);
-INSERT INTO public.gamedata16chocolate VALUES (27, 611, false);
-INSERT INTO public.gamedata16chocolate VALUES (39, 618, false);
-INSERT INTO public.gamedata16chocolate VALUES (202, 719, true);
-INSERT INTO public.gamedata16chocolate VALUES (467, 30003, true);
-INSERT INTO public.gamedata16chocolate VALUES (52, 197, true);
-INSERT INTO public.gamedata16chocolate VALUES (212, 723, true);
-INSERT INTO public.gamedata16chocolate VALUES (213, 303, true);
-INSERT INTO public.gamedata16chocolate VALUES (178, 773, true);
-INSERT INTO public.gamedata16chocolate VALUES (222, 342, true);
-INSERT INTO public.gamedata16chocolate VALUES (472, 30008, true);
-INSERT INTO public.gamedata16chocolate VALUES (474, 30010, true);
-INSERT INTO public.gamedata16chocolate VALUES (275, 397, true);
-INSERT INTO public.gamedata16chocolate VALUES (279, 720, true);
-INSERT INTO public.gamedata16chocolate VALUES (299, 268, true);
-INSERT INTO public.gamedata16chocolate VALUES (476, 30012, true);
-INSERT INTO public.gamedata16chocolate VALUES (382, 10028, true);
-INSERT INTO public.gamedata16chocolate VALUES (383, 10029, true);
-INSERT INTO public.gamedata16chocolate VALUES (384, 10030, true);
-INSERT INTO public.gamedata16chocolate VALUES (32, 234, true);
-INSERT INTO public.gamedata16chocolate VALUES (386, 10032, true);
-INSERT INTO public.gamedata16chocolate VALUES (183, 204, true);
-INSERT INTO public.gamedata16chocolate VALUES (468, 30004, true);
-INSERT INTO public.gamedata16chocolate VALUES (387, 10033, true);
-INSERT INTO public.gamedata16chocolate VALUES (471, 30007, true);
-INSERT INTO public.gamedata16chocolate VALUES (469, 30005, true);
-INSERT INTO public.gamedata16chocolate VALUES (56, 727, true);
-INSERT INTO public.gamedata16chocolate VALUES (470, 30006, true);
-INSERT INTO public.gamedata16chocolate VALUES (107, 231, true);
-INSERT INTO public.gamedata16chocolate VALUES (395, 10041, true);
-INSERT INTO public.gamedata16chocolate VALUES (385, 10031, true);
-INSERT INTO public.gamedata16chocolate VALUES (45, 209, true);
-INSERT INTO public.gamedata16chocolate VALUES (477, 30013, true);
-INSERT INTO public.gamedata16chocolate VALUES (478, 30014, true);
-INSERT INTO public.gamedata16chocolate VALUES (466, 30002, true);
-INSERT INTO public.gamedata16chocolate VALUES (108, 729, true);
-INSERT INTO public.gamedata16chocolate VALUES (479, 30015, true);
-INSERT INTO public.gamedata16chocolate VALUES (396, 10042, true);
-INSERT INTO public.gamedata16chocolate VALUES (182, 730, true);
-INSERT INTO public.gamedata16chocolate VALUES (480, 30016, true);
-INSERT INTO public.gamedata16chocolate VALUES (481, 30017, false);
-INSERT INTO public.gamedata16chocolate VALUES (391, 10037, true);
-INSERT INTO public.gamedata16chocolate VALUES (25, 284, true);
-INSERT INTO public.gamedata16chocolate VALUES (26, 410, true);
-INSERT INTO public.gamedata16chocolate VALUES (28, 800, true);
-INSERT INTO public.gamedata16chocolate VALUES (29, 838, true);
-INSERT INTO public.gamedata16chocolate VALUES (31, 258, true);
-INSERT INTO public.gamedata16chocolate VALUES (33, 278, true);
-INSERT INTO public.gamedata16chocolate VALUES (34, 287, true);
-INSERT INTO public.gamedata16chocolate VALUES (36, 216, true);
-INSERT INTO public.gamedata16chocolate VALUES (38, 293, true);
-INSERT INTO public.gamedata16chocolate VALUES (43, 90, true);
-INSERT INTO public.gamedata16chocolate VALUES (49, 445, true);
-INSERT INTO public.gamedata16chocolate VALUES (50, 281, true);
-INSERT INTO public.gamedata16chocolate VALUES (51, 424, true);
-INSERT INTO public.gamedata16chocolate VALUES (55, 220, true);
-INSERT INTO public.gamedata16chocolate VALUES (58, 848, true);
-INSERT INTO public.gamedata16chocolate VALUES (61, 428, true);
-INSERT INTO public.gamedata16chocolate VALUES (63, 411, true);
-INSERT INTO public.gamedata16chocolate VALUES (64, 718, true);
-INSERT INTO public.gamedata16chocolate VALUES (65, 88, true);
-INSERT INTO public.gamedata16chocolate VALUES (66, 433, true);
-INSERT INTO public.gamedata16chocolate VALUES (67, 648, true);
-INSERT INTO public.gamedata16chocolate VALUES (101, 444, true);
-INSERT INTO public.gamedata16chocolate VALUES (102, 307, true);
-INSERT INTO public.gamedata16chocolate VALUES (104, 176, true);
-INSERT INTO public.gamedata16chocolate VALUES (105, 180, true);
-INSERT INTO public.gamedata16chocolate VALUES (106, 272, true);
-INSERT INTO public.gamedata16chocolate VALUES (109, 441, true);
-INSERT INTO public.gamedata16chocolate VALUES (130, 156, true);
-INSERT INTO public.gamedata16chocolate VALUES (143, 153, true);
-INSERT INTO public.gamedata16chocolate VALUES (159, 527, true);
-INSERT INTO public.gamedata16chocolate VALUES (160, 337, true);
-INSERT INTO public.gamedata16chocolate VALUES (161, 386, true);
-INSERT INTO public.gamedata16chocolate VALUES (163, 335, true);
-INSERT INTO public.gamedata16chocolate VALUES (164, 324, true);
-INSERT INTO public.gamedata16chocolate VALUES (166, 746, true);
-INSERT INTO public.gamedata16chocolate VALUES (168, 350, true);
-INSERT INTO public.gamedata16chocolate VALUES (170, 174, true);
-INSERT INTO public.gamedata16chocolate VALUES (172, 438, true);
-INSERT INTO public.gamedata16chocolate VALUES (177, 163, true);
-INSERT INTO public.gamedata16chocolate VALUES (179, 707, true);
-INSERT INTO public.gamedata16chocolate VALUES (180, 837, true);
-INSERT INTO public.gamedata16chocolate VALUES (181, 715, true);
-INSERT INTO public.gamedata16chocolate VALUES (193, 459, true);
-INSERT INTO public.gamedata16chocolate VALUES (195, 254, true);
-INSERT INTO public.gamedata16chocolate VALUES (198, 184, true);
-INSERT INTO public.gamedata16chocolate VALUES (388, 10034, true);
-INSERT INTO public.gamedata16chocolate VALUES (389, 10035, true);
-INSERT INTO public.gamedata16chocolate VALUES (390, 10036, true);
-INSERT INTO public.gamedata16chocolate VALUES (392, 10038, true);
-INSERT INTO public.gamedata16chocolate VALUES (393, 10039, true);
-INSERT INTO public.gamedata16chocolate VALUES (442, 20022, true);
-INSERT INTO public.gamedata16chocolate VALUES (443, 20023, true);
-INSERT INTO public.gamedata16chocolate VALUES (444, 20024, true);
-INSERT INTO public.gamedata16chocolate VALUES (445, 20025, true);
-INSERT INTO public.gamedata16chocolate VALUES (446, 20026, true);
-INSERT INTO public.gamedata16chocolate VALUES (447, 20027, true);
-INSERT INTO public.gamedata16chocolate VALUES (448, 20028, true);
-INSERT INTO public.gamedata16chocolate VALUES (449, 20029, true);
-INSERT INTO public.gamedata16chocolate VALUES (450, 20030, true);
-INSERT INTO public.gamedata16chocolate VALUES (451, 20031, true);
-INSERT INTO public.gamedata16chocolate VALUES (452, 20032, true);
-INSERT INTO public.gamedata16chocolate VALUES (453, 20033, true);
-INSERT INTO public.gamedata16chocolate VALUES (454, 20034, true);
-INSERT INTO public.gamedata16chocolate VALUES (455, 20035, true);
-INSERT INTO public.gamedata16chocolate VALUES (456, 20036, true);
-INSERT INTO public.gamedata16chocolate VALUES (457, 20037, true);
-INSERT INTO public.gamedata16chocolate VALUES (458, 20038, true);
-INSERT INTO public.gamedata16chocolate VALUES (459, 20039, true);
-INSERT INTO public.gamedata16chocolate VALUES (406, 10052, true);
-INSERT INTO public.gamedata16chocolate VALUES (413, 10059, true);
-INSERT INTO public.gamedata16chocolate VALUES (265, 196, true);
-INSERT INTO public.gamedata16chocolate VALUES (402, 10048, true);
-INSERT INTO public.gamedata16chocolate VALUES (267, 212, true);
-INSERT INTO public.gamedata16chocolate VALUES (325, 251, true);
-INSERT INTO public.gamedata16chocolate VALUES (403, 10049, true);
-INSERT INTO public.gamedata16chocolate VALUES (240, 369, true);
-INSERT INTO public.gamedata16chocolate VALUES (245, 909, true);
-INSERT INTO public.gamedata16chocolate VALUES (308, 203, false);
-INSERT INTO public.gamedata16chocolate VALUES (251, 266, true);
-INSERT INTO public.gamedata16chocolate VALUES (417, 10063, true);
-INSERT INTO public.gamedata16chocolate VALUES (254, 230, true);
-INSERT INTO public.gamedata16chocolate VALUES (409, 10055, true);
-INSERT INTO public.gamedata16chocolate VALUES (311, 239, true);
-INSERT INTO public.gamedata16chocolate VALUES (239, 877, true);
-INSERT INTO public.gamedata16chocolate VALUES (407, 10053, true);
-INSERT INTO public.gamedata16chocolate VALUES (416, 10062, true);
-INSERT INTO public.gamedata16chocolate VALUES (244, 910, true);
-INSERT INTO public.gamedata16chocolate VALUES (319, 237, false);
-INSERT INTO public.gamedata16chocolate VALUES (324, 815, true);
-INSERT INTO public.gamedata16chocolate VALUES (238, 422, true);
-INSERT INTO public.gamedata16chocolate VALUES (241, 371, true);
-INSERT INTO public.gamedata16chocolate VALUES (242, 621, true);
-INSERT INTO public.gamedata16chocolate VALUES (243, 446, true);
-INSERT INTO public.gamedata16chocolate VALUES (246, 264, true);
-INSERT INTO public.gamedata16chocolate VALUES (247, 609, true);
-INSERT INTO public.gamedata16chocolate VALUES (248, 681, true);
-INSERT INTO public.gamedata16chocolate VALUES (257, 252, true);
-INSERT INTO public.gamedata16chocolate VALUES (260, 524, true);
-INSERT INTO public.gamedata16chocolate VALUES (262, 812, true);
-INSERT INTO public.gamedata16chocolate VALUES (263, 244, true);
-INSERT INTO public.gamedata16chocolate VALUES (264, 840, true);
-INSERT INTO public.gamedata16chocolate VALUES (266, 139, true);
-INSERT INTO public.gamedata16chocolate VALUES (269, 164, true);
-INSERT INTO public.gamedata16chocolate VALUES (301, 836, true);
-INSERT INTO public.gamedata16chocolate VALUES (302, 606, true);
-INSERT INTO public.gamedata16chocolate VALUES (304, 323, true);
-INSERT INTO public.gamedata16chocolate VALUES (305, 329, true);
-INSERT INTO public.gamedata16chocolate VALUES (306, 841, true);
-INSERT INTO public.gamedata16chocolate VALUES (307, 158, true);
-INSERT INTO public.gamedata16chocolate VALUES (309, 401, true);
-INSERT INTO public.gamedata16chocolate VALUES (312, 525, true);
-INSERT INTO public.gamedata16chocolate VALUES (314, 496, true);
-INSERT INTO public.gamedata16chocolate VALUES (320, 241, true);
-INSERT INTO public.gamedata16chocolate VALUES (321, 417, true);
-INSERT INTO public.gamedata16chocolate VALUES (323, 830, true);
-INSERT INTO public.gamedata16chocolate VALUES (326, 839, true);
-INSERT INTO public.gamedata16chocolate VALUES (327, 699, true);
-INSERT INTO public.gamedata16chocolate VALUES (332, 229, true);
-INSERT INTO public.gamedata16chocolate VALUES (333, 694, true);
-INSERT INTO public.gamedata16chocolate VALUES (334, 693, true);
-INSERT INTO public.gamedata16chocolate VALUES (335, 805, true);
-INSERT INTO public.gamedata16chocolate VALUES (336, 253, true);
-INSERT INTO public.gamedata16chocolate VALUES (338, 219, true);
-INSERT INTO public.gamedata16chocolate VALUES (339, 430, true);
-INSERT INTO public.gamedata16chocolate VALUES (340, 432, true);
-INSERT INTO public.gamedata16chocolate VALUES (345, 305, true);
-INSERT INTO public.gamedata16chocolate VALUES (358, 157, true);
-INSERT INTO public.gamedata16chocolate VALUES (399, 10045, true);
-INSERT INTO public.gamedata16chocolate VALUES (400, 10046, true);
-INSERT INTO public.gamedata16chocolate VALUES (401, 10047, true);
-INSERT INTO public.gamedata16chocolate VALUES (405, 10051, true);
-INSERT INTO public.gamedata16chocolate VALUES (408, 10054, true);
-INSERT INTO public.gamedata16chocolate VALUES (411, 10057, true);
-INSERT INTO public.gamedata16chocolate VALUES (412, 10058, true);
-INSERT INTO public.gamedata16chocolate VALUES (414, 10060, true);
-INSERT INTO public.gamedata16chocolate VALUES (415, 10061, true);
-INSERT INTO public.gamedata16chocolate VALUES (418, 10064, true);
-INSERT INTO public.gamedata16chocolate VALUES (420, 10066, true);
-INSERT INTO public.gamedata16chocolate VALUES (422, 20002, true);
-INSERT INTO public.gamedata16chocolate VALUES (423, 20003, true);
-INSERT INTO public.gamedata16chocolate VALUES (424, 20004, true);
-INSERT INTO public.gamedata16chocolate VALUES (425, 20005, true);
-INSERT INTO public.gamedata16chocolate VALUES (482, 30018, true);
-INSERT INTO public.gamedata16chocolate VALUES (261, 607, true);
-INSERT INTO public.gamedata16chocolate VALUES (258, 222, true);
-INSERT INTO public.gamedata16chocolate VALUES (329, 218, true);
-INSERT INTO public.gamedata16chocolate VALUES (337, 907, true);
-INSERT INTO public.gamedata16chocolate VALUES (410, 10056, true);
-INSERT INTO public.gamedata16chocolate VALUES (344, 200, true);
-INSERT INTO public.gamedata16chocolate VALUES (398, 10044, true);
-INSERT INTO public.gamedata16chocolate VALUES (259, 232, true);
-INSERT INTO public.gamedata16chocolate VALUES (428, 20008, true);
-INSERT INTO public.gamedata16chocolate VALUES (429, 20009, true);
-INSERT INTO public.gamedata16chocolate VALUES (430, 20010, true);
-INSERT INTO public.gamedata16chocolate VALUES (431, 20011, true);
-INSERT INTO public.gamedata16chocolate VALUES (460, 20040, true);
-INSERT INTO public.gamedata16chocolate VALUES (461, 20041, true);
-INSERT INTO public.gamedata16chocolate VALUES (462, 20042, true);
-INSERT INTO public.gamedata16chocolate VALUES (463, 20043, true);
-INSERT INTO public.gamedata16chocolate VALUES (464, 20044, true);
-INSERT INTO public.gamedata16chocolate VALUES (465, 30001, true);
-INSERT INTO public.gamedata16chocolate VALUES (473, 30009, true);
-INSERT INTO public.gamedata16chocolate VALUES (475, 30011, true);
-INSERT INTO public.gamedata16chocolate VALUES (500, 60002, true);
-INSERT INTO public.gamedata16chocolate VALUES (501, 60003, true);
-INSERT INTO public.gamedata16chocolate VALUES (486, 30022, true);
-INSERT INTO public.gamedata16chocolate VALUES (483, 30019, true);
-INSERT INTO public.gamedata16chocolate VALUES (489, 30025, true);
-INSERT INTO public.gamedata16chocolate VALUES (484, 30020, true);
-INSERT INTO public.gamedata16chocolate VALUES (487, 30023, true);
-INSERT INTO public.gamedata16chocolate VALUES (485, 30021, true);
-INSERT INTO public.gamedata16chocolate VALUES (494, 50001, true);
-INSERT INTO public.gamedata16chocolate VALUES (495, 50002, true);
-INSERT INTO public.gamedata16chocolate VALUES (496, 50003, true);
-INSERT INTO public.gamedata16chocolate VALUES (492, 30028, true);
-INSERT INTO public.gamedata16chocolate VALUES (493, 40001, true);
-INSERT INTO public.gamedata16chocolate VALUES (498, 60001, true);
-INSERT INTO public.gamedata16chocolate VALUES (499, 70001, true);
-INSERT INTO public.gamedata16chocolate VALUES (488, 30024, false);
-INSERT INTO public.gamedata16chocolate VALUES (490, 30026, false);
-INSERT INTO public.gamedata16chocolate VALUES (491, 30027, false);
-INSERT INTO public.gamedata16chocolate VALUES (497, 50004, false);
-
-
---
 -- Data for Name: gamedata2cowbell; Type: TABLE DATA; Schema: public; Owner: stardewuser
 --
 
@@ -796,9 +295,9 @@ INSERT INTO public.gamedata2cowbell VALUES (929, 50002, true);
 INSERT INTO public.gamedata2cowbell VALUES (715, 733, true);
 INSERT INTO public.gamedata2cowbell VALUES (940, 60002, true);
 INSERT INTO public.gamedata2cowbell VALUES (941, 60003, true);
-INSERT INTO public.gamedata2cowbell VALUES (942, 30029, false);
-INSERT INTO public.gamedata2cowbell VALUES (943, 30030, false);
-INSERT INTO public.gamedata2cowbell VALUES (944, 30031, false);
+INSERT INTO public.gamedata2cowbell VALUES (942, 30029, true);
+INSERT INTO public.gamedata2cowbell VALUES (944, 30031, true);
+INSERT INTO public.gamedata2cowbell VALUES (943, 30030, true);
 INSERT INTO public.gamedata2cowbell VALUES (454, 91, true);
 INSERT INTO public.gamedata2cowbell VALUES (455, 904, true);
 INSERT INTO public.gamedata2cowbell VALUES (509, 926, true);
@@ -841,7 +340,7 @@ INSERT INTO public.gamedata2cowbell VALUES (931, 50004, true);
 INSERT INTO public.gamedata2cowbell VALUES (465, 611, true);
 INSERT INTO public.gamedata2cowbell VALUES (516, 732, true);
 INSERT INTO public.gamedata2cowbell VALUES (477, 618, true);
-INSERT INTO public.gamedata2cowbell VALUES (945, 30032, false);
+INSERT INTO public.gamedata2cowbell VALUES (945, 30032, true);
 INSERT INTO public.gamedata2cowbell VALUES (443, 129, true);
 INSERT INTO public.gamedata2cowbell VALUES (491, 638, true);
 INSERT INTO public.gamedata2cowbell VALUES (507, 201, true);
@@ -1281,6 +780,516 @@ INSERT INTO public.gamedata2cowbell VALUES (786, 261, true);
 INSERT INTO public.gamedata2cowbell VALUES (790, 521, true);
 INSERT INTO public.gamedata2cowbell VALUES (668, 651, true);
 INSERT INTO public.gamedata2cowbell VALUES (925, 30027, true);
+
+
+--
+-- Data for Name: gamedata30skrad; Type: TABLE DATA; Schema: public; Owner: stardewuser
+--
+
+INSERT INTO public.gamedata30skrad VALUES (9, 613, true);
+INSERT INTO public.gamedata30skrad VALUES (61, 428, true);
+INSERT INTO public.gamedata30skrad VALUES (68, 404, true);
+INSERT INTO public.gamedata30skrad VALUES (137, 436, true);
+INSERT INTO public.gamedata30skrad VALUES (33, 278, true);
+INSERT INTO public.gamedata30skrad VALUES (24, 346, true);
+INSERT INTO public.gamedata30skrad VALUES (2, 705, true);
+INSERT INTO public.gamedata30skrad VALUES (8, 160, true);
+INSERT INTO public.gamedata30skrad VALUES (4, 300, true);
+INSERT INTO public.gamedata30skrad VALUES (80, 282, true);
+INSERT INTO public.gamedata30skrad VALUES (11, 274, true);
+INSERT INTO public.gamedata30skrad VALUES (111, 595, true);
+INSERT INTO public.gamedata30skrad VALUES (25, 284, true);
+INSERT INTO public.gamedata30skrad VALUES (83, 716, true);
+INSERT INTO public.gamedata30skrad VALUES (34, 287, true);
+INSERT INTO public.gamedata30skrad VALUES (51, 424, true);
+INSERT INTO public.gamedata30skrad VALUES (22, 787, true);
+INSERT INTO public.gamedata30skrad VALUES (36, 216, true);
+INSERT INTO public.gamedata30skrad VALUES (67, 648, true);
+INSERT INTO public.gamedata30skrad VALUES (102, 307, true);
+INSERT INTO public.gamedata30skrad VALUES (50, 281, true);
+INSERT INTO public.gamedata30skrad VALUES (26, 410, true);
+INSERT INTO public.gamedata30skrad VALUES (12, 605, true);
+INSERT INTO public.gamedata30skrad VALUES (131, 829, true);
+INSERT INTO public.gamedata30skrad VALUES (55, 220, true);
+INSERT INTO public.gamedata30skrad VALUES (66, 433, true);
+INSERT INTO public.gamedata30skrad VALUES (28, 800, true);
+INSERT INTO public.gamedata30skrad VALUES (58, 848, true);
+INSERT INTO public.gamedata30skrad VALUES (29, 838, true);
+INSERT INTO public.gamedata30skrad VALUES (10, 634, true);
+INSERT INTO public.gamedata30skrad VALUES (15, 198, true);
+INSERT INTO public.gamedata30skrad VALUES (56, 727, true);
+INSERT INTO public.gamedata30skrad VALUES (20, 370, true);
+INSERT INTO public.gamedata30skrad VALUES (54, 286, true);
+INSERT INTO public.gamedata30skrad VALUES (115, 885, true);
+INSERT INTO public.gamedata30skrad VALUES (71, 926, true);
+INSERT INTO public.gamedata30skrad VALUES (38, 293, true);
+INSERT INTO public.gamedata30skrad VALUES (16, 91, true);
+INSERT INTO public.gamedata30skrad VALUES (17, 904, true);
+INSERT INTO public.gamedata30skrad VALUES (6, 454, true);
+INSERT INTO public.gamedata30skrad VALUES (7, 499, true);
+INSERT INTO public.gamedata30skrad VALUES (81, 612, true);
+INSERT INTO public.gamedata30skrad VALUES (1, 447, false);
+INSERT INTO public.gamedata30skrad VALUES (3, 456, false);
+INSERT INTO public.gamedata30skrad VALUES (13, 235, false);
+INSERT INTO public.gamedata30skrad VALUES (18, 691, false);
+INSERT INTO public.gamedata30skrad VALUES (23, 207, false);
+INSERT INTO public.gamedata30skrad VALUES (27, 611, false);
+INSERT INTO public.gamedata30skrad VALUES (32, 234, false);
+INSERT INTO public.gamedata30skrad VALUES (39, 618, false);
+INSERT INTO public.gamedata30skrad VALUES (45, 209, false);
+INSERT INTO public.gamedata30skrad VALUES (49, 445, false);
+INSERT INTO public.gamedata30skrad VALUES (52, 197, false);
+INSERT INTO public.gamedata30skrad VALUES (69, 201, false);
+INSERT INTO public.gamedata30skrad VALUES (70, 223, false);
+INSERT INTO public.gamedata30skrad VALUES (75, 695, false);
+INSERT INTO public.gamedata30skrad VALUES (78, 732, false);
+INSERT INTO public.gamedata30skrad VALUES (79, 710, false);
+INSERT INTO public.gamedata30skrad VALUES (82, 238, false);
+INSERT INTO public.gamedata30skrad VALUES (85, 214, false);
+INSERT INTO public.gamedata30skrad VALUES (151, 147, true);
+INSERT INTO public.gamedata30skrad VALUES (198, 184, true);
+INSERT INTO public.gamedata30skrad VALUES (192, 306, true);
+INSERT INTO public.gamedata30skrad VALUES (234, 276, true);
+INSERT INTO public.gamedata30skrad VALUES (193, 459, true);
+INSERT INTO public.gamedata30skrad VALUES (239, 369, true);
+INSERT INTO public.gamedata30skrad VALUES (187, 228, true);
+INSERT INTO public.gamedata30skrad VALUES (208, 195, true);
+INSERT INTO public.gamedata30skrad VALUES (214, 211, true);
+INSERT INTO public.gamedata30skrad VALUES (199, 243, true);
+INSERT INTO public.gamedata30skrad VALUES (246, 609, true);
+INSERT INTO public.gamedata30skrad VALUES (248, 394, true);
+INSERT INTO public.gamedata30skrad VALUES (212, 303, true);
+INSERT INTO public.gamedata30skrad VALUES (226, 206, true);
+INSERT INTO public.gamedata30skrad VALUES (219, 141, true);
+INSERT INTO public.gamedata30skrad VALUES (196, 269, true);
+INSERT INTO public.gamedata30skrad VALUES (220, 722, true);
+INSERT INTO public.gamedata30skrad VALUES (227, 604, true);
+INSERT INTO public.gamedata30skrad VALUES (197, 798, true);
+INSERT INTO public.gamedata30skrad VALUES (242, 446, true);
+INSERT INTO public.gamedata30skrad VALUES (204, 392, true);
+INSERT INTO public.gamedata30skrad VALUES (235, 608, true);
+INSERT INTO public.gamedata30skrad VALUES (224, 832, true);
+INSERT INTO public.gamedata30skrad VALUES (202, 719, true);
+INSERT INTO public.gamedata30skrad VALUES (188, 834, true);
+INSERT INTO public.gamedata30skrad VALUES (201, 257, true);
+INSERT INTO public.gamedata30skrad VALUES (240, 371, true);
+INSERT INTO public.gamedata30skrad VALUES (194, 288, true);
+INSERT INTO public.gamedata30skrad VALUES (247, 681, true);
+INSERT INTO public.gamedata30skrad VALUES (207, 772, true);
+INSERT INTO public.gamedata30skrad VALUES (236, 236, true);
+INSERT INTO public.gamedata30skrad VALUES (244, 909, true);
+INSERT INTO public.gamedata30skrad VALUES (243, 910, true);
+INSERT INTO public.gamedata30skrad VALUES (256, 252, true);
+INSERT INTO public.gamedata30skrad VALUES (186, 703, false);
+INSERT INTO public.gamedata30skrad VALUES (189, 905, false);
+INSERT INTO public.gamedata30skrad VALUES (190, 731, false);
+INSERT INTO public.gamedata30skrad VALUES (200, 879, false);
+INSERT INTO public.gamedata30skrad VALUES (210, 289, false);
+INSERT INTO public.gamedata30skrad VALUES (213, 457, false);
+INSERT INTO public.gamedata30skrad VALUES (216, 199, false);
+INSERT INTO public.gamedata30skrad VALUES (218, 215, false);
+INSERT INTO public.gamedata30skrad VALUES (225, 221, false);
+INSERT INTO public.gamedata30skrad VALUES (228, 906, false);
+INSERT INTO public.gamedata30skrad VALUES (231, 651, false);
+INSERT INTO public.gamedata30skrad VALUES (238, 877, false);
+INSERT INTO public.gamedata30skrad VALUES (250, 266, false);
+INSERT INTO public.gamedata30skrad VALUES (253, 230, false);
+INSERT INTO public.gamedata30skrad VALUES (257, 222, false);
+INSERT INTO public.gamedata30skrad VALUES (258, 232, false);
+INSERT INTO public.gamedata30skrad VALUES (259, 524, false);
+INSERT INTO public.gamedata30skrad VALUES (260, 607, false);
+INSERT INTO public.gamedata30skrad VALUES (261, 812, false);
+INSERT INTO public.gamedata30skrad VALUES (276, 152, true);
+INSERT INTO public.gamedata30skrad VALUES (422, 20003, true);
+INSERT INTO public.gamedata30skrad VALUES (373, 10020, true);
+INSERT INTO public.gamedata30skrad VALUES (423, 20004, true);
+INSERT INTO public.gamedata30skrad VALUES (431, 20012, true);
+INSERT INTO public.gamedata30skrad VALUES (430, 20011, true);
+INSERT INTO public.gamedata30skrad VALUES (428, 20009, true);
+INSERT INTO public.gamedata30skrad VALUES (444, 20025, true);
+INSERT INTO public.gamedata30skrad VALUES (371, 10018, true);
+INSERT INTO public.gamedata30skrad VALUES (377, 10024, true);
+INSERT INTO public.gamedata30skrad VALUES (378, 10025, true);
+INSERT INTO public.gamedata30skrad VALUES (399, 10046, true);
+INSERT INTO public.gamedata30skrad VALUES (419, 10066, true);
+INSERT INTO public.gamedata30skrad VALUES (403, 10050, true);
+INSERT INTO public.gamedata30skrad VALUES (441, 20022, true);
+INSERT INTO public.gamedata30skrad VALUES (442, 20023, true);
+INSERT INTO public.gamedata30skrad VALUES (413, 10060, true);
+INSERT INTO public.gamedata30skrad VALUES (445, 20026, true);
+INSERT INTO public.gamedata30skrad VALUES (417, 10064, true);
+INSERT INTO public.gamedata30skrad VALUES (410, 10057, true);
+INSERT INTO public.gamedata30skrad VALUES (414, 10061, true);
+INSERT INTO public.gamedata30skrad VALUES (404, 10051, true);
+INSERT INTO public.gamedata30skrad VALUES (389, 10036, true);
+INSERT INTO public.gamedata30skrad VALUES (406, 10053, true);
+INSERT INTO public.gamedata30skrad VALUES (386, 10033, true);
+INSERT INTO public.gamedata30skrad VALUES (382, 10029, true);
+INSERT INTO public.gamedata30skrad VALUES (380, 10027, true);
+INSERT INTO public.gamedata30skrad VALUES (385, 10032, true);
+INSERT INTO public.gamedata30skrad VALUES (381, 10028, true);
+INSERT INTO public.gamedata30skrad VALUES (390, 10037, true);
+INSERT INTO public.gamedata30skrad VALUES (401, 10048, true);
+INSERT INTO public.gamedata30skrad VALUES (397, 10044, true);
+INSERT INTO public.gamedata30skrad VALUES (387, 10034, true);
+INSERT INTO public.gamedata30skrad VALUES (372, 10019, false);
+INSERT INTO public.gamedata30skrad VALUES (375, 10022, false);
+INSERT INTO public.gamedata30skrad VALUES (379, 10026, false);
+INSERT INTO public.gamedata30skrad VALUES (383, 10030, false);
+INSERT INTO public.gamedata30skrad VALUES (384, 10031, false);
+INSERT INTO public.gamedata30skrad VALUES (388, 10035, false);
+INSERT INTO public.gamedata30skrad VALUES (391, 10038, false);
+INSERT INTO public.gamedata30skrad VALUES (394, 10041, false);
+INSERT INTO public.gamedata30skrad VALUES (395, 10042, false);
+INSERT INTO public.gamedata30skrad VALUES (398, 10045, false);
+INSERT INTO public.gamedata30skrad VALUES (400, 10047, false);
+INSERT INTO public.gamedata30skrad VALUES (402, 10049, false);
+INSERT INTO public.gamedata30skrad VALUES (405, 10052, false);
+INSERT INTO public.gamedata30skrad VALUES (408, 10055, false);
+INSERT INTO public.gamedata30skrad VALUES (409, 10056, false);
+INSERT INTO public.gamedata30skrad VALUES (411, 10058, false);
+INSERT INTO public.gamedata30skrad VALUES (412, 10059, false);
+INSERT INTO public.gamedata30skrad VALUES (415, 10062, false);
+INSERT INTO public.gamedata30skrad VALUES (416, 10063, false);
+INSERT INTO public.gamedata30skrad VALUES (5, 129, true);
+INSERT INTO public.gamedata30skrad VALUES (37, 132, true);
+INSERT INTO public.gamedata30skrad VALUES (46, 143, true);
+INSERT INTO public.gamedata30skrad VALUES (90, 18, true);
+INSERT INTO public.gamedata30skrad VALUES (176, 20, true);
+INSERT INTO public.gamedata30skrad VALUES (121, 267, true);
+INSERT INTO public.gamedata30skrad VALUES (42, 700, true);
+INSERT INTO public.gamedata30skrad VALUES (44, 142, true);
+INSERT INTO public.gamedata30skrad VALUES (73, 378, true);
+INSERT INTO public.gamedata30skrad VALUES (174, 136, true);
+INSERT INTO public.gamedata30skrad VALUES (60, 330, true);
+INSERT INTO public.gamedata30skrad VALUES (143, 153, true);
+INSERT INTO public.gamedata30skrad VALUES (19, 368, true);
+INSERT INTO public.gamedata30skrad VALUES (169, 250, true);
+INSERT INTO public.gamedata30skrad VALUES (30, 597, true);
+INSERT INTO public.gamedata30skrad VALUES (47, 190, true);
+INSERT INTO public.gamedata30skrad VALUES (14, 685, true);
+INSERT INTO public.gamedata30skrad VALUES (21, 767, true);
+INSERT INTO public.gamedata30skrad VALUES (165, 380, true);
+INSERT INTO public.gamedata30skrad VALUES (62, 382, true);
+INSERT INTO public.gamedata30skrad VALUES (72, 334, true);
+INSERT INTO public.gamedata30skrad VALUES (457, 20038, true);
+INSERT INTO public.gamedata30skrad VALUES (454, 20035, true);
+INSERT INTO public.gamedata30skrad VALUES (462, 20043, true);
+INSERT INTO public.gamedata30skrad VALUES (460, 20041, true);
+INSERT INTO public.gamedata30skrad VALUES (459, 20040, true);
+INSERT INTO public.gamedata30skrad VALUES (453, 20034, true);
+INSERT INTO public.gamedata30skrad VALUES (463, 20044, true);
+INSERT INTO public.gamedata30skrad VALUES (452, 20033, true);
+INSERT INTO public.gamedata30skrad VALUES (461, 20042, true);
+INSERT INTO public.gamedata30skrad VALUES (455, 20036, true);
+INSERT INTO public.gamedata30skrad VALUES (450, 20031, true);
+INSERT INTO public.gamedata30skrad VALUES (456, 20037, true);
+INSERT INTO public.gamedata30skrad VALUES (451, 20032, true);
+INSERT INTO public.gamedata30skrad VALUES (446, 20027, true);
+INSERT INTO public.gamedata30skrad VALUES (464, 30001, false);
+INSERT INTO public.gamedata30skrad VALUES (144, 188, true);
+INSERT INTO public.gamedata30skrad VALUES (147, 709, true);
+INSERT INTO public.gamedata30skrad VALUES (163, 335, true);
+INSERT INTO public.gamedata30skrad VALUES (138, 336, true);
+INSERT INTO public.gamedata30skrad VALUES (63, 411, true);
+INSERT INTO public.gamedata30skrad VALUES (59, 372, true);
+INSERT INTO public.gamedata30skrad VALUES (130, 156, true);
+INSERT INTO public.gamedata30skrad VALUES (140, 398, true);
+INSERT INTO public.gamedata30skrad VALUES (139, 384, true);
+INSERT INTO public.gamedata30skrad VALUES (155, 260, true);
+INSERT INTO public.gamedata30skrad VALUES (97, 704, true);
+INSERT INTO public.gamedata30skrad VALUES (154, 304, true);
+INSERT INTO public.gamedata30skrad VALUES (181, 715, true);
+INSERT INTO public.gamedata30skrad VALUES (74, 393, true);
+INSERT INTO public.gamedata30skrad VALUES (76, 270, true);
+INSERT INTO public.gamedata30skrad VALUES (53, 638, true);
+INSERT INTO public.gamedata30skrad VALUES (94, 466, true);
+INSERT INTO public.gamedata30skrad VALUES (64, 718, true);
+INSERT INTO public.gamedata30skrad VALUES (77, 717, true);
+INSERT INTO public.gamedata30skrad VALUES (35, 881, true);
+INSERT INTO public.gamedata30skrad VALUES (161, 386, true);
+INSERT INTO public.gamedata30skrad VALUES (65, 88, true);
+INSERT INTO public.gamedata30skrad VALUES (43, 90, true);
+INSERT INTO public.gamedata30skrad VALUES (95, 807, true);
+INSERT INTO public.gamedata30skrad VALUES (160, 337, true);
+INSERT INTO public.gamedata30skrad VALUES (40, 684, true);
+INSERT INTO public.gamedata30skrad VALUES (48, 78, true);
+INSERT INTO public.gamedata30skrad VALUES (114, 771, true);
+INSERT INTO public.gamedata30skrad VALUES (116, 259, true);
+INSERT INTO public.gamedata30skrad VALUES (91, 22, true);
+INSERT INTO public.gamedata30skrad VALUES (84, 159, true);
+INSERT INTO public.gamedata30skrad VALUES (158, 161, true);
+INSERT INTO public.gamedata30skrad VALUES (162, 645, true);
+INSERT INTO public.gamedata30skrad VALUES (282, 137, true);
+INSERT INTO public.gamedata30skrad VALUES (277, 706, true);
+INSERT INTO public.gamedata30skrad VALUES (292, 399, true);
+INSERT INTO public.gamedata30skrad VALUES (215, 24, true);
+INSERT INTO public.gamedata30skrad VALUES (293, 495, true);
+INSERT INTO public.gamedata30skrad VALUES (359, 16, true);
+INSERT INTO public.gamedata30skrad VALUES (267, 296, true);
+INSERT INTO public.gamedata30skrad VALUES (221, 342, true);
+INSERT INTO public.gamedata30skrad VALUES (269, 92, true);
+INSERT INTO public.gamedata30skrad VALUES (364, 388, true);
+INSERT INTO public.gamedata30skrad VALUES (302, 2, true);
+INSERT INTO public.gamedata30skrad VALUES (280, 766, true);
+INSERT INTO public.gamedata30skrad VALUES (362, 412, true);
+INSERT INTO public.gamedata30skrad VALUES (309, 400, true);
+INSERT INTO public.gamedata30skrad VALUES (285, 768, true);
+INSERT INTO public.gamedata30skrad VALUES (237, 422, true);
+INSERT INTO public.gamedata30skrad VALUES (345, 769, true);
+INSERT INTO public.gamedata30skrad VALUES (241, 621, true);
+INSERT INTO public.gamedata30skrad VALUES (306, 158, true);
+INSERT INTO public.gamedata30skrad VALUES (312, 698, true);
+INSERT INTO public.gamedata30skrad VALUES (222, 144, true);
+INSERT INTO public.gamedata30skrad VALUES (249, 138, true);
+INSERT INTO public.gamedata30skrad VALUES (341, 130, true);
+INSERT INTO public.gamedata30skrad VALUES (251, 146, true);
+INSERT INTO public.gamedata30skrad VALUES (327, 701, true);
+INSERT INTO public.gamedata30skrad VALUES (233, 128, true);
+INSERT INTO public.gamedata30skrad VALUES (205, 725, true);
+INSERT INTO public.gamedata30skrad VALUES (229, 637, true);
+INSERT INTO public.gamedata30skrad VALUES (191, 724, true);
+INSERT INTO public.gamedata30skrad VALUES (357, 157, true);
+INSERT INTO public.gamedata30skrad VALUES (315, 145, true);
+INSERT INTO public.gamedata30skrad VALUES (356, 262, true);
+INSERT INTO public.gamedata30skrad VALUES (203, 682, true);
+INSERT INTO public.gamedata30skrad VALUES (245, 264, true);
+INSERT INTO public.gamedata30skrad VALUES (314, 593, true);
+INSERT INTO public.gamedata30skrad VALUES (368, 734, true);
+INSERT INTO public.gamedata30skrad VALUES (195, 254, true);
+INSERT INTO public.gamedata30skrad VALUES (316, 421, true);
+INSERT INTO public.gamedata30skrad VALUES (254, 150, true);
+INSERT INTO public.gamedata30skrad VALUES (329, 256, true);
+INSERT INTO public.gamedata30skrad VALUES (278, 720, true);
+INSERT INTO public.gamedata30skrad VALUES (211, 723, true);
+INSERT INTO public.gamedata30skrad VALUES (268, 164, true);
+INSERT INTO public.gamedata30skrad VALUES (223, 726, true);
+INSERT INTO public.gamedata30skrad VALUES (288, 396, true);
+INSERT INTO public.gamedata30skrad VALUES (232, 192, true);
+INSERT INTO public.gamedata30skrad VALUES (255, 338, true);
+INSERT INTO public.gamedata30skrad VALUES (209, 635, true);
+INSERT INTO public.gamedata30skrad VALUES (206, 149, true);
+INSERT INTO public.gamedata30skrad VALUES (217, 636, true);
+INSERT INTO public.gamedata30skrad VALUES (313, 496, true);
+INSERT INTO public.gamedata30skrad VALUES (448, 20029, true);
+INSERT INTO public.gamedata30skrad VALUES (458, 20039, true);
+INSERT INTO public.gamedata30skrad VALUES (449, 20030, true);
+INSERT INTO public.gamedata30skrad VALUES (447, 20028, true);
+INSERT INTO public.gamedata30skrad VALUES (270, 131, true);
+INSERT INTO public.gamedata30skrad VALUES (146, 708, true);
+INSERT INTO public.gamedata30skrad VALUES (420, 20001, true);
+INSERT INTO public.gamedata30skrad VALUES (57, 702, true);
+INSERT INTO public.gamedata30skrad VALUES (418, 10065, true);
+INSERT INTO public.gamedata30skrad VALUES (407, 10054, true);
+INSERT INTO public.gamedata30skrad VALUES (393, 10040, true);
+INSERT INTO public.gamedata30skrad VALUES (340, 591, true);
+INSERT INTO public.gamedata30skrad VALUES (41, 874, true);
+INSERT INTO public.gamedata30skrad VALUES (426, 20007, true);
+INSERT INTO public.gamedata30skrad VALUES (438, 20019, true);
+INSERT INTO public.gamedata30skrad VALUES (439, 20020, true);
+INSERT INTO public.gamedata30skrad VALUES (440, 20021, true);
+INSERT INTO public.gamedata30skrad VALUES (252, 420, true);
+INSERT INTO public.gamedata30skrad VALUES (103, 148, true);
+INSERT INTO public.gamedata30skrad VALUES (317, 155, true);
+INSERT INTO public.gamedata30skrad VALUES (421, 20002, true);
+INSERT INTO public.gamedata30skrad VALUES (443, 20024, true);
+INSERT INTO public.gamedata30skrad VALUES (230, 376, true);
+INSERT INTO public.gamedata30skrad VALUES (436, 20017, true);
+INSERT INTO public.gamedata30skrad VALUES (427, 20008, true);
+INSERT INTO public.gamedata30skrad VALUES (425, 20006, true);
+INSERT INTO public.gamedata30skrad VALUES (424, 20005, true);
+INSERT INTO public.gamedata30skrad VALUES (374, 10021, true);
+INSERT INTO public.gamedata30skrad VALUES (31, 258, true);
+INSERT INTO public.gamedata30skrad VALUES (376, 10023, true);
+INSERT INTO public.gamedata30skrad VALUES (396, 10043, true);
+INSERT INTO public.gamedata30skrad VALUES (392, 10039, true);
+INSERT INTO public.gamedata30skrad VALUES (167, 344, true);
+INSERT INTO public.gamedata30skrad VALUES (321, 402, true);
+INSERT INTO public.gamedata30skrad VALUES (435, 20016, true);
+INSERT INTO public.gamedata30skrad VALUES (437, 20018, true);
+INSERT INTO public.gamedata30skrad VALUES (429, 20010, true);
+INSERT INTO public.gamedata30skrad VALUES (433, 20014, true);
+INSERT INTO public.gamedata30skrad VALUES (434, 20015, true);
+INSERT INTO public.gamedata30skrad VALUES (92, 919, false);
+INSERT INTO public.gamedata30skrad VALUES (107, 231, false);
+INSERT INTO public.gamedata30skrad VALUES (108, 729, false);
+INSERT INTO public.gamedata30skrad VALUES (109, 441, false);
+INSERT INTO public.gamedata30skrad VALUES (117, 649, false);
+INSERT INTO public.gamedata30skrad VALUES (119, 728, false);
+INSERT INTO public.gamedata30skrad VALUES (120, 213, false);
+INSERT INTO public.gamedata30skrad VALUES (123, 202, false);
+INSERT INTO public.gamedata30skrad VALUES (124, 225, false);
+INSERT INTO public.gamedata30skrad VALUES (126, 205, false);
+INSERT INTO public.gamedata30skrad VALUES (127, 610, false);
+INSERT INTO public.gamedata30skrad VALUES (135, 888, false);
+INSERT INTO public.gamedata30skrad VALUES (145, 614, false);
+INSERT INTO public.gamedata30skrad VALUES (156, 918, false);
+INSERT INTO public.gamedata30skrad VALUES (157, 233, false);
+INSERT INTO public.gamedata30skrad VALUES (164, 324, false);
+INSERT INTO public.gamedata30skrad VALUES (106, 272, true);
+INSERT INTO public.gamedata30skrad VALUES (104, 176, true);
+INSERT INTO public.gamedata30skrad VALUES (105, 180, true);
+INSERT INTO public.gamedata30skrad VALUES (168, 350, true);
+INSERT INTO public.gamedata30skrad VALUES (153, 340, true);
+INSERT INTO public.gamedata30skrad VALUES (136, 426, true);
+INSERT INTO public.gamedata30skrad VALUES (173, 186, true);
+INSERT INTO public.gamedata30skrad VALUES (172, 438, true);
+INSERT INTO public.gamedata30skrad VALUES (171, 182, true);
+INSERT INTO public.gamedata30skrad VALUES (125, 194, true);
+INSERT INTO public.gamedata30skrad VALUES (88, 414, true);
+INSERT INTO public.gamedata30skrad VALUES (118, 403, true);
+INSERT INTO public.gamedata30skrad VALUES (150, 408, true);
+INSERT INTO public.gamedata30skrad VALUES (112, 497, true);
+INSERT INTO public.gamedata30skrad VALUES (113, 240, true);
+INSERT INTO public.gamedata30skrad VALUES (134, 208, true);
+INSERT INTO public.gamedata30skrad VALUES (100, 442, true);
+INSERT INTO public.gamedata30skrad VALUES (98, 687, true);
+INSERT INTO public.gamedata30skrad VALUES (166, 746, true);
+INSERT INTO public.gamedata30skrad VALUES (170, 174, true);
+INSERT INTO public.gamedata30skrad VALUES (149, 210, true);
+INSERT INTO public.gamedata30skrad VALUES (96, 242, true);
+INSERT INTO public.gamedata30skrad VALUES (152, 283, true);
+INSERT INTO public.gamedata30skrad VALUES (159, 527, true);
+INSERT INTO public.gamedata30skrad VALUES (133, 775, true);
+INSERT INTO public.gamedata30skrad VALUES (101, 444, true);
+INSERT INTO public.gamedata30skrad VALUES (86, 418, true);
+INSERT INTO public.gamedata30skrad VALUES (132, 903, true);
+INSERT INTO public.gamedata30skrad VALUES (128, 248, true);
+INSERT INTO public.gamedata30skrad VALUES (175, 162, true);
+INSERT INTO public.gamedata30skrad VALUES (177, 163, true);
+INSERT INTO public.gamedata30skrad VALUES (110, 872, true);
+INSERT INTO public.gamedata30skrad VALUES (141, 297, true);
+INSERT INTO public.gamedata30skrad VALUES (129, 325, true);
+INSERT INTO public.gamedata30skrad VALUES (122, 464, true);
+INSERT INTO public.gamedata30skrad VALUES (99, 463, true);
+INSERT INTO public.gamedata30skrad VALUES (93, 920, true);
+INSERT INTO public.gamedata30skrad VALUES (87, 333, true);
+INSERT INTO public.gamedata30skrad VALUES (142, 407, true);
+INSERT INTO public.gamedata30skrad VALUES (89, 409, true);
+INSERT INTO public.gamedata30skrad VALUES (148, 298, true);
+INSERT INTO public.gamedata30skrad VALUES (182, 730, false);
+INSERT INTO public.gamedata30skrad VALUES (183, 204, false);
+INSERT INTO public.gamedata30skrad VALUES (184, 908, false);
+INSERT INTO public.gamedata30skrad VALUES (264, 196, false);
+INSERT INTO public.gamedata30skrad VALUES (266, 212, false);
+INSERT INTO public.gamedata30skrad VALUES (271, 227, false);
+INSERT INTO public.gamedata30skrad VALUES (279, 733, false);
+INSERT INTO public.gamedata30skrad VALUES (286, 224, false);
+INSERT INTO public.gamedata30skrad VALUES (289, 226, false);
+INSERT INTO public.gamedata30skrad VALUES (290, 686, false);
+INSERT INTO public.gamedata30skrad VALUES (294, 599, false);
+INSERT INTO public.gamedata30skrad VALUES (307, 203, false);
+INSERT INTO public.gamedata30skrad VALUES (310, 239, false);
+INSERT INTO public.gamedata30skrad VALUES (311, 525, false);
+INSERT INTO public.gamedata30skrad VALUES (318, 237, false);
+INSERT INTO public.gamedata30skrad VALUES (323, 815, false);
+INSERT INTO public.gamedata30skrad VALUES (324, 251, false);
+INSERT INTO public.gamedata30skrad VALUES (328, 218, false);
+INSERT INTO public.gamedata30skrad VALUES (336, 907, false);
+INSERT INTO public.gamedata30skrad VALUES (343, 200, false);
+INSERT INTO public.gamedata30skrad VALUES (350, 261, false);
+INSERT INTO public.gamedata30skrad VALUES (352, 886, false);
+INSERT INTO public.gamedata30skrad VALUES (354, 521, false);
+INSERT INTO public.gamedata30skrad VALUES (355, 331, false);
+INSERT INTO public.gamedata30skrad VALUES (358, 774, false);
+INSERT INTO public.gamedata30skrad VALUES (465, 30002, false);
+INSERT INTO public.gamedata30skrad VALUES (466, 30003, false);
+INSERT INTO public.gamedata30skrad VALUES (468, 30005, false);
+INSERT INTO public.gamedata30skrad VALUES (469, 30006, false);
+INSERT INTO public.gamedata30skrad VALUES (470, 30007, false);
+INSERT INTO public.gamedata30skrad VALUES (471, 30008, false);
+INSERT INTO public.gamedata30skrad VALUES (472, 30009, false);
+INSERT INTO public.gamedata30skrad VALUES (473, 30010, false);
+INSERT INTO public.gamedata30skrad VALUES (475, 30012, false);
+INSERT INTO public.gamedata30skrad VALUES (476, 30013, false);
+INSERT INTO public.gamedata30skrad VALUES (477, 30014, false);
+INSERT INTO public.gamedata30skrad VALUES (478, 30015, false);
+INSERT INTO public.gamedata30skrad VALUES (479, 30016, false);
+INSERT INTO public.gamedata30skrad VALUES (480, 30017, false);
+INSERT INTO public.gamedata30skrad VALUES (481, 30018, false);
+INSERT INTO public.gamedata30skrad VALUES (482, 30019, false);
+INSERT INTO public.gamedata30skrad VALUES (483, 30020, false);
+INSERT INTO public.gamedata30skrad VALUES (484, 30021, false);
+INSERT INTO public.gamedata30skrad VALUES (485, 30022, false);
+INSERT INTO public.gamedata30skrad VALUES (486, 30023, false);
+INSERT INTO public.gamedata30skrad VALUES (487, 30024, false);
+INSERT INTO public.gamedata30skrad VALUES (488, 30025, false);
+INSERT INTO public.gamedata30skrad VALUES (489, 30026, false);
+INSERT INTO public.gamedata30skrad VALUES (490, 30027, false);
+INSERT INTO public.gamedata30skrad VALUES (497, 50001, false);
+INSERT INTO public.gamedata30skrad VALUES (498, 50002, false);
+INSERT INTO public.gamedata30skrad VALUES (499, 50003, false);
+INSERT INTO public.gamedata30skrad VALUES (500, 50004, false);
+INSERT INTO public.gamedata30skrad VALUES (326, 699, true);
+INSERT INTO public.gamedata30skrad VALUES (432, 20013, true);
+INSERT INTO public.gamedata30skrad VALUES (370, 280, true);
+INSERT INTO public.gamedata30skrad VALUES (361, 348, true);
+INSERT INTO public.gamedata30skrad VALUES (348, 140, true);
+INSERT INTO public.gamedata30skrad VALUES (273, 154, true);
+INSERT INTO public.gamedata30skrad VALUES (265, 139, true);
+INSERT INTO public.gamedata30skrad VALUES (339, 432, true);
+INSERT INTO public.gamedata30skrad VALUES (283, 721, true);
+INSERT INTO public.gamedata30skrad VALUES (338, 430, true);
+INSERT INTO public.gamedata30skrad VALUES (274, 397, true);
+INSERT INTO public.gamedata30skrad VALUES (342, 271, true);
+INSERT INTO public.gamedata30skrad VALUES (360, 406, true);
+INSERT INTO public.gamedata30skrad VALUES (330, 93, true);
+INSERT INTO public.gamedata30skrad VALUES (337, 219, true);
+INSERT INTO public.gamedata30skrad VALUES (331, 229, true);
+INSERT INTO public.gamedata30skrad VALUES (262, 244, true);
+INSERT INTO public.gamedata30skrad VALUES (351, 688, true);
+INSERT INTO public.gamedata30skrad VALUES (320, 417, true);
+INSERT INTO public.gamedata30skrad VALUES (369, 440, true);
+INSERT INTO public.gamedata30skrad VALUES (298, 268, true);
+INSERT INTO public.gamedata30skrad VALUES (179, 707, true);
+INSERT INTO public.gamedata30skrad VALUES (295, 151, true);
+INSERT INTO public.gamedata30skrad VALUES (284, 416, true);
+INSERT INTO public.gamedata30skrad VALUES (363, 498, true);
+INSERT INTO public.gamedata30skrad VALUES (272, 165, true);
+INSERT INTO public.gamedata30skrad VALUES (281, 796, true);
+INSERT INTO public.gamedata30skrad VALUES (474, 30011, true);
+INSERT INTO public.gamedata30skrad VALUES (502, 60002, true);
+INSERT INTO public.gamedata30skrad VALUES (501, 60001, true);
+INSERT INTO public.gamedata30skrad VALUES (503, 60003, true);
+INSERT INTO public.gamedata30skrad VALUES (504, 70001, true);
+INSERT INTO public.gamedata30skrad VALUES (291, 799, true);
+INSERT INTO public.gamedata30skrad VALUES (346, 308, true);
+INSERT INTO public.gamedata30skrad VALUES (344, 305, true);
+INSERT INTO public.gamedata30skrad VALUES (180, 837, true);
+INSERT INTO public.gamedata30skrad VALUES (347, 795, true);
+INSERT INTO public.gamedata30skrad VALUES (185, 851, true);
+INSERT INTO public.gamedata30skrad VALUES (467, 30004, true);
+INSERT INTO public.gamedata30skrad VALUES (322, 830, true);
+INSERT INTO public.gamedata30skrad VALUES (300, 836, true);
+INSERT INTO public.gamedata30skrad VALUES (296, 814, true);
+INSERT INTO public.gamedata30skrad VALUES (335, 253, true);
+INSERT INTO public.gamedata30skrad VALUES (275, 265, true);
+INSERT INTO public.gamedata30skrad VALUES (496, 40001, true);
+INSERT INTO public.gamedata30skrad VALUES (365, 322, true);
+INSERT INTO public.gamedata30skrad VALUES (303, 323, true);
+INSERT INTO public.gamedata30skrad VALUES (334, 805, true);
+INSERT INTO public.gamedata30skrad VALUES (287, 465, true);
+INSERT INTO public.gamedata30skrad VALUES (349, 690, true);
+INSERT INTO public.gamedata30skrad VALUES (353, 689, true);
+INSERT INTO public.gamedata30skrad VALUES (366, 328, true);
+INSERT INTO public.gamedata30skrad VALUES (308, 401, true);
+INSERT INTO public.gamedata30skrad VALUES (263, 840, true);
+INSERT INTO public.gamedata30skrad VALUES (304, 329, true);
+INSERT INTO public.gamedata30skrad VALUES (305, 841, true);
+INSERT INTO public.gamedata30skrad VALUES (367, 405, true);
+INSERT INTO public.gamedata30skrad VALUES (299, 415, true);
+INSERT INTO public.gamedata30skrad VALUES (332, 694, true);
+INSERT INTO public.gamedata30skrad VALUES (333, 693, true);
+INSERT INTO public.gamedata30skrad VALUES (325, 839, true);
+INSERT INTO public.gamedata30skrad VALUES (178, 773, true);
+INSERT INTO public.gamedata30skrad VALUES (301, 606, true);
+INSERT INTO public.gamedata30skrad VALUES (297, 921, true);
+INSERT INTO public.gamedata30skrad VALUES (495, 30032, true);
+INSERT INTO public.gamedata30skrad VALUES (494, 30031, true);
+INSERT INTO public.gamedata30skrad VALUES (493, 30030, true);
+INSERT INTO public.gamedata30skrad VALUES (492, 30029, true);
+INSERT INTO public.gamedata30skrad VALUES (491, 30028, true);
+INSERT INTO public.gamedata30skrad VALUES (319, 241, true);
 
 
 --
@@ -1799,7 +1808,7 @@ INSERT INTO public.gamedata8relaxed VALUES (507, 30032, false);
 
 INSERT INTO public.gamelist VALUES (2, 'cowbell', true);
 INSERT INTO public.gamelist VALUES (8, 'relaxed', true);
-INSERT INTO public.gamelist VALUES (16, 'chocolate', true);
+INSERT INTO public.gamelist VALUES (30, 'skrad', true);
 
 
 --
@@ -1895,7 +1904,7 @@ INSERT INTO public.items VALUES (86, 'Catfish', 143, true, false, false, false, 
 INSERT INTO public.items VALUES (87, 'Cauliflower', 190, true, false, false, false, false, true, true, false, false, true, false, false, false);
 INSERT INTO public.items VALUES (88, 'Cauliflower Seeds', 474, false, false, false, false, false, false, false, false, false, true, false, false, false);
 INSERT INTO public.items VALUES (89, 'Cave Carrot', 78, true, false, false, false, false, true, false, false, true, true, true, true, true);
-INSERT INTO public.items VALUES (90, 'Caviar', 445, true, false, false, false, false, true, false, false, false, false, false, false, false);
+INSERT INTO public.items VALUES (90, 'Caviar', 445, true, false, false, true, false, true, false, false, false, false, false, false, false);
 INSERT INTO public.items VALUES (91, 'Celestine', 566, false, false, false, false, false, false, false, false, false, false, false, false, false);
 INSERT INTO public.items VALUES (92, 'Chanterelle', 281, true, false, false, false, false, true, false, false, true, false, false, true, false);
 INSERT INTO public.items VALUES (93, 'Cheese', 424, true, false, false, false, false, true, false, false, false, false, false, false, false);
@@ -3588,17 +3597,17 @@ INSERT INTO public.recipes VALUES (979, 417, 70001, 1);
 
 
 --
--- Name: gamedata16chocolate_pk_seq; Type: SEQUENCE SET; Schema: public; Owner: stardewuser
---
-
-SELECT pg_catalog.setval('public.gamedata16chocolate_pk_seq', 505, true);
-
-
---
 -- Name: gamedata2cowbell_pk_seq; Type: SEQUENCE SET; Schema: public; Owner: stardewuser
 --
 
 SELECT pg_catalog.setval('public.gamedata2cowbell_pk_seq', 945, true);
+
+
+--
+-- Name: gamedata30skrad_pk_seq; Type: SEQUENCE SET; Schema: public; Owner: stardewuser
+--
+
+SELECT pg_catalog.setval('public.gamedata30skrad_pk_seq', 504, true);
 
 
 --
@@ -3612,7 +3621,7 @@ SELECT pg_catalog.setval('public.gamedata8relaxed_pk_seq', 507, true);
 -- Name: gamelist_pk_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.gamelist_pk_seq', 21, true);
+SELECT pg_catalog.setval('public.gamelist_pk_seq', 31, true);
 
 
 --
@@ -3630,19 +3639,19 @@ SELECT pg_catalog.setval('public.recipes_pk_seq', 979, true);
 
 
 --
--- Name: gamedata16chocolate gamedata16chocolate_pkey; Type: CONSTRAINT; Schema: public; Owner: stardewuser
---
-
-ALTER TABLE ONLY public.gamedata16chocolate
-    ADD CONSTRAINT gamedata16chocolate_pkey PRIMARY KEY (pk);
-
-
---
 -- Name: gamedata2cowbell gamedata2cowbell_pkey; Type: CONSTRAINT; Schema: public; Owner: stardewuser
 --
 
 ALTER TABLE ONLY public.gamedata2cowbell
     ADD CONSTRAINT gamedata2cowbell_pkey PRIMARY KEY (pk);
+
+
+--
+-- Name: gamedata30skrad gamedata30skrad_pkey; Type: CONSTRAINT; Schema: public; Owner: stardewuser
+--
+
+ALTER TABLE ONLY public.gamedata30skrad
+    ADD CONSTRAINT gamedata30skrad_pkey PRIMARY KEY (pk);
 
 
 --
@@ -3681,6 +3690,8 @@ ALTER TABLE ONLY public.recipes
 -- Name: SCHEMA public; Type: ACL; Schema: -; Owner: postgres
 --
 
+REVOKE USAGE ON SCHEMA public FROM PUBLIC;
+GRANT ALL ON SCHEMA public TO PUBLIC;
 GRANT ALL ON SCHEMA public TO stardewuser;
 
 
