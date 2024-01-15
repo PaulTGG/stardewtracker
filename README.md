@@ -12,6 +12,8 @@ More Full Disclosure: This is also my first project on Github, so... yeah.
 
 UPDATES
 
+2024-January 14 - Yep, made it worse.  Caviar was right in the first place.
+
 2024-January 11 - Made caviar a "craftable" item, just for clarity.  It's been a while since I changed anything, so I have no idea if that's made things better, or worse.
 
 2022-April-25 - Added the walnut puzzle quests (Gourmand Frog (my guy), the mermaid puzzle, and the Banana Shrine).
