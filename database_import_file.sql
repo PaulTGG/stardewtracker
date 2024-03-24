@@ -940,8 +940,8 @@ INSERT INTO public.items VALUES (736, 'Heavy Furnace', 10094, true, false, false
 INSERT INTO public.items VALUES (737, 'Mini-Forge', 10095, true, false, false, true, false, false, false, false, false, false, false, false, false);
 INSERT INTO public.items VALUES (738, 'Mushroom Log', 10096, true, false, false, true, false, false, false, false, false, false, false, false, false);
 INSERT INTO public.items VALUES (739, 'Sonar Bobber', 10097, true, false, false, true, false, false, false, false, false, false, false, false, false);
-INSERT INTO public.items VALUES (740, 'Statue of Blessings', 10098, true, false, false, true, false, false, false, false, false, false, false, false, false);
-INSERT INTO public.items VALUES (741, 'Statue of the Dwarf King', 10099, true, false, false, true, false, false, false, false, false, false, false, false, false);
+INSERT INTO public.items VALUES (740, 'Statue Of Blessings', 10098, true, false, false, true, false, false, false, false, false, false, false, false, false);
+INSERT INTO public.items VALUES (741, 'Statue Of The Dwarf King', 10099, true, false, false, true, false, false, false, false, false, false, false, false, false);
 INSERT INTO public.items VALUES (742, 'Tent Kit', 10100, true, false, false, true, false, false, false, false, false, false, false, false, false);
 INSERT INTO public.items VALUES (743, 'Text Sign', 10101, true, false, false, true, false, false, false, false, false, false, false, false, false);
 INSERT INTO public.items VALUES (744, 'Treasure Totem', 10102, true, false, false, true, false, false, false, false, false, false, false, false, false);
