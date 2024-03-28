@@ -12,6 +12,8 @@ More Full Disclosure: This is also my first project on Github, so... yeah.
 
 UPDATES
 
+2024-March 27 - Fixed the broccoli to track like the rest of the crops.  (You'd think I hadn't done this in a while or something.)
+
 2024-March 26 - Fixed the new jellies to track like the rest of the fish.
 
 2024-March 24 - Updated for 1.6.  (And screw the Statue of Blessings...)
