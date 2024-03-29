@@ -11,6 +11,7 @@ More Full Disclosure: This is also my first project on Github, so... yeah.
 
 
 UPDATES
+2024-March 28 - Fixed the carrot, summer squash, powdermelon, and Mystic Syrup to track blah blah blah.  (Yikes.)
 
 2024-March 27 - Fixed the broccoli to track like the rest of the crops.  (You'd think I hadn't done this in a while or something.)
 
